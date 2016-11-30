@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tour of Heroes';
   heroes = HEROES;
+  selectedHero: Hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
 export class Hero {
   id: number;
