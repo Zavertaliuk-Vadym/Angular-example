@@ -19,7 +19,7 @@
   border-radius: 4px;
 }
 .heroes li.selected:hover {
-  background-color: #BBD8DC !important;
+  background-color: #ff36ff !important;
   color: white;
 }
 .heroes li:hover {
