@@ -1,0 +1,44 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Mr. Vadimka"
+    },
+    {
+      "id": 2,
+      "name": "Dr. IQ"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Herocu"
+    },
+    {
+      "id": 4,
+      "name": "Ms. Java"
+    },
+    {
+      "id": 5,
+      "name": "Ms. Spring"
+    },
+    {
+      "id": 6,
+      "name": "Mr. Hibernate"
+    },
+    {
+      "id": 7,
+      "name": "Cap. Jack Sparrow"
+    },
+    {
+      "id": 8,
+      "name": "Ms. Dinama"
+    },
+    {
+      "id": 9,
+      "name": "Mr. Tomcat"
+    },
+    {
+      "id": 10,
+      "name": "Ms. Nike"
+    }
+  ]
+}

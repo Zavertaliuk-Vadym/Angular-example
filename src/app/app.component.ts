@@ -1,17 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {Hero} from "./hero-detail/hero";
-import {HEROES} from "./mock-heroes";
-import {HeroService} from "./hero.service";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers:[HeroService]
+    moduleId: module.id.toString(),
+    selector: 'my-app',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css'],
 })
-export class AppComponent implements OnInit{
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class AppComponent {
+    title = 'Tour of Heroes';
 }
