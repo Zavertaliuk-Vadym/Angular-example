@@ -10,19 +10,8 @@ import {HeroService} from "./hero.service";
   providers:[HeroService]
 })
 export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    this.getHeroes();
-  }
-  title = 'Tour of Heroes';
-  heroes: Hero[];
-  selectedHero: Hero;
+  constructor() { }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
-  constructor(private heroService:HeroService){
-  }
-  getHeroes():void {
-    this.heroService.getHeroesSlowly().then(heroes=>this.heroes=heroes);
+  ngOnInit() {
   }
 }

@@ -12,13 +12,13 @@ import {RouterModule} from "@angular/router";
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
-    // RouterModule.forRoot([
-    //   {
-    //     path: 'heroes',
-    //     component: HeroesComponent
-    //   }
-    // ])
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
   declarations: [
     AppComponent,
