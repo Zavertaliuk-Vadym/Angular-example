@@ -1,5 +1,5 @@
-import { Injectable }    from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import {Injectable}    from '@angular/core';
+import {Headers, Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import {Hero} from './hero-detail/hero';
@@ -9,7 +9,8 @@ import {Hero} from './hero-detail/hero';
 export class HeroService {
   private heroesUrl = 'api/heroes';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   getHeroes(): Promise<Hero[]> {
     return this.http.get(this.heroesUrl)
@@ -22,8 +23,6 @@ export class HeroService {
     return this.getHeroes()
       .then(heroes => heroes.find(hero => hero.id === id));
   }
-
-
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
@@ -46,6 +45,14 @@ export class HeroService {
       .post(this.heroesUrl, JSON.stringify({name: name}), {headers: this.headers})
       .toPromise()
       .then(res => res.json())
+      .catch(this.handleError);
+  }
+
+  delete(id: number): Promise<void> {
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.delete(url, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
       .catch(this.handleError);
   }
 }
