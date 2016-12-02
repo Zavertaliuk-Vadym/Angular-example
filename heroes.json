@@ -14,7 +14,7 @@
     },
     {
       "id": "4",
-      "name": "Ms. Java1"
+      "name": "Ms. Java"
     },
     {
       "id": "5",
@@ -25,7 +25,7 @@
       "name": "Mr. Hibernate"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Cap. Jack Sparrow"
     },
     {
@@ -39,14 +39,6 @@
     {
       "name": "Ms. Sara",
       "id": 11
-    },
-    {
-      "name": "asdasdas",
-      "id": 12
-    },
-    {
-      "name": "Ololo",
-      "id": "13"
     }
   ]
 }
