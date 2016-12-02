@@ -23,16 +23,13 @@ export class HeroService {
       .then(heroes => heroes.find(hero => hero.id === id));
   }
 
-  getHeroesSlowly(): Promise<Hero[]> {
-    return new Promise<Hero[]>(resolve =>
-      setTimeout(resolve, 2000))
-      .then(() => this.getHeroes());
-  }
+
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
+
   private headers = new Headers({'Content-Type': 'application/json'});
 
   update(hero: Hero): Promise<Hero> {
@@ -41,6 +38,14 @@ export class HeroService {
       .put(url, JSON.stringify(hero), {headers: this.headers})
       .toPromise()
       .then(() => hero)
+      .catch(this.handleError);
+  }
+
+  create(name: string): Promise<Hero> {
+    return this.http
+      .post(this.heroesUrl, JSON.stringify({name: name}), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json())
       .catch(this.handleError);
   }
 }
