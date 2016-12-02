@@ -1,7 +1,7 @@
 {
   "heroes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Mr. Vadimka"
     },
     {
@@ -43,6 +43,10 @@
     {
       "name": "asdasdas",
       "id": 12
+    },
+    {
+      "name": "Ololo",
+      "id": "13"
     }
   ]
 }
