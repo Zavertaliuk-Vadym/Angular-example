@@ -22,7 +22,7 @@
     },
     {
       "id": "6",
-      "name": "Mr. Hibernate123"
+      "name": "Mr. Hibernate"
     },
     {
       "id": 7,
@@ -33,10 +33,6 @@
       "name": "Ms. Dinama"
     },
     {
-      "id": 9,
-      "name": "Mr. Tomcat"
-    },
-    {
       "id": 10,
       "name": "Ms. Nike"
     },
@@ -45,16 +41,8 @@
       "id": 11
     },
     {
-      "name": "weqweq",
+      "name": "asdasdas",
       "id": 12
-    },
-    {
-      "name": "Ms. Mum",
-      "id": 13
-    },
-    {
-      "name": "ms. Mum",
-      "id": 14
     }
   ]
 }
