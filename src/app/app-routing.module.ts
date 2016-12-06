@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'task',  component: TaskComponent },
   { path: 'list',     component: ListComponent },
-  // { path: 'detail/:id', component: HeroDetailComponent }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes)],
