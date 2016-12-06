@@ -1,11 +1,11 @@
-<div *ngIf="hero">
-  <h2>{{hero.name}} details!</h2>
+<div *ngIf="list">
+  <h2>{{list.list_name}} details!</h2>
   <div>
-    <label>id: </label>{{hero.id}}</div>
+    <label>idList: </label>{{list.list_id}}</div>
   <div>
     <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name" />
+    <input [(ngModel)]="list.list_name" placeholder="name" />
   </div>
-  <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
+  <button (click)="goBack()">Back</button>
 </div>

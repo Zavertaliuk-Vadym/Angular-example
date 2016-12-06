@@ -3,37 +3,37 @@ import {ActivatedRoute, Params} from "@angular/router";
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import {HeroService} from "../hero.service";
-import {Hero} from './hero';
+import { List }         from '../list';
+import { ListService }  from '../list.service';
 
 @Component({
   moduleId: module.id.toString(),
-  selector: 'app-hero-detail',
+  selector: 'my-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
+
 export class HeroDetailComponent implements OnInit {
+  list: List;
 
-  constructor(private heroService: HeroService,
-              private route: ActivatedRoute,
-              private location: Location) {
-  }
-
-  @Input()
-  hero: Hero;
+  constructor(
+    private listService: ListService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     this.route.params
-      .switchMap((params: Params) => this.heroService.getHero(params['id']))
-      .subscribe(hero => this.hero = hero);
+      .switchMap((params: Params) => this.listService.getList(+params['list_id']))
+      .subscribe(list => this.list = list);
+  }
+
+  save(): void {
+    this.listService.update(this.list)
+      .then(() => this.goBack());
   }
 
   goBack(): void {
     this.location.back();
-  }
-
-  save(): void {
-    this.heroService.update(this.hero)
-      .then(() => this.goBack());
   }
 }
